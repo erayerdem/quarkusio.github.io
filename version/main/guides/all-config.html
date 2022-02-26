@@ -1646,7 +1646,7 @@
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>docker.io/apicurio/apicurio-registry-mem:2.1.5.Final</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>quay.io/apicurio/apicurio-registry-mem:2.2.0.Final</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -2638,6 +2638,20 @@ An unused bean:</p>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-container-image-jib_quarkus.jib.working-directory"></a><code><a href="#quarkus-container-image-jib_quarkus.jib.working-directory">quarkus.jib.working-directory</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The working directory to use in the generated image. The default value is chosen to work in accordance with the default base image.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>/home/jboss</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -5400,6 +5414,20 @@ this root path. All extension-provided endpoints will be served from <code>${qua
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-vertx-http_quarkus.http.accept-backlog"></a><code><a href="#quarkus-vertx-http_quarkus.http.accept-backlog">quarkus.http.accept-backlog</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The accept backlog, this is how many connections can be waiting to be accepted before connections start being rejected</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-vertx-http_quarkus.http.domain-socket"></a><code><a href="#quarkus-vertx-http_quarkus.http.domain-socket">quarkus.http.domain-socket</a></code></p>
 </div>
 <div class="openblock description">
@@ -5928,6 +5956,99 @@ this root path. All extension-provided endpoints will be served from <code>${qua
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>graphql-ui</code></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-elasticsearch-rest-client-common_quarkus-elasticsearch-rest-client-common-elasticsearch-rest-client-common"></a><a href="#quarkus-elasticsearch-rest-client-common_quarkus-elasticsearch-rest-client-common-elasticsearch-rest-client-common">Elasticsearch REST Client Common</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.enabled"></a><code><a href="#quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.enabled">quarkus.elasticsearch.devservices.enabled</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>If Dev Services for Elasticsearch has been explicitly enabled or disabled. Dev Services are generally enabled by default, unless there is an existing configuration present. For Elasticsearch, Dev Services starts a server unless <code>quarkus.elasticsearch.hosts</code> is set.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.port"></a><code><a href="#quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.port">quarkus.elasticsearch.devservices.port</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Optional fixed port the dev service will listen to.
+ If not defined, the port will be chosen randomly.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.image-name"></a><code><a href="#quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.image-name">quarkus.elasticsearch.devservices.image-name</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The Elasticsearch container image to use. Defaults to the elasticsearch image provided by Elastic.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>docker.elastic.co/elasticsearch/elasticsearch:7.17.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.java-opts"></a><code><a href="#quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.java-opts">quarkus.elasticsearch.devservices.java-opts</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The value for the ES_JAVA_OPTS env variable. Defaults to setting the heap to 1GB.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>-Xmx1g</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.shared"></a><code><a href="#quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.shared">quarkus.elasticsearch.devservices.shared</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Indicates if the Elasticsearch server managed by Quarkus Dev Services is shared. When shared, Quarkus looks for running containers using label-based service discovery. If a matching container is found, it is used, and so a second one is not started. Otherwise, Dev Services for Elasticsearch starts a new container.
+ The discovery uses the <code>quarkus-dev-service-elasticsearch</code> label. The value is configured using the <code>service-name</code> property.
+ Container sharing is only used in dev mode.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.service-name"></a><code><a href="#quarkus-elasticsearch-rest-client-common_quarkus.elasticsearch.devservices.service-name">quarkus.elasticsearch.devservices.service-name</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The value of the <code>quarkus-dev-service-elasticsearch</code> label attached to the started container. This property is used when <code>shared</code> is set to <code>true</code>. In this case, before starting a container, Dev Services for Elasticsearch looks for a container with the <code>quarkus-dev-service-elasticsearch</code> label set to the configured value. If found, it will use this container instead of starting a new one. Otherwise it starts a new container with the <code>quarkus-dev-service-elasticsearch</code> label set to the specified value.
+ This property is used when you need multiple shared Elasticsearch servers.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>elasticsearch</code></p></td>
 </tr>
 <tr>
 <th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-elasticsearch-rest-client_quarkus-elasticsearch-rest-client-elasticsearch-rest-client"></a><a href="#quarkus-elasticsearch-rest-client_quarkus-elasticsearch-rest-client-elasticsearch-rest-client">Elasticsearch REST client</a></p></th>
@@ -25034,6 +25155,25 @@ Note that backslashes must be double escaped as <code>\\\\</code>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-micrometer_quarkus.micrometer.binder.http-server.suppress-non-application-uris"></a><code><a href="#quarkus-micrometer_quarkus.micrometer.binder.http-server.suppress-non-application-uris">quarkus.micrometer.binder.http-server.suppress-non-application-uris</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Suppress non-application uris from metrics collection.
+This will suppress all metrics for non-application endpoints using
+<code>${quarkus.http.root-path}/${quarkus.http.non-application-root-path}</code>.</p>
+</div>
+<div class="paragraph">
+<p>Suppressing non-application uris is enabled by default.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-micrometer_quarkus.micrometer.binder.http-server.max-uri-tags"></a><code><a href="#quarkus-micrometer_quarkus.micrometer.binder.http-server.max-uri-tags">quarkus.micrometer.binder.http-server.max-uri-tags</a></code></p>
 </div>
 <div class="openblock description">
@@ -25539,6 +25679,20 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
   <a href="#duration-note-anchor" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>5S</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-mongodb-client_quarkus.mongodb.native.dns.log-activity"></a><code><a href="#quarkus-mongodb-client_quarkus.mongodb.native.dns.log-activity">quarkus.mongodb.native.dns.log-activity</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>If <code>native.dns.use-vertx-dns-resolver</code> is set to <code>true</code>, this property enables the logging ot the DNS lookup. It can be useful to understand why the lookup fails.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -27430,6 +27584,20 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-oidc_quarkus.oidc.authentication.response-mode"></a><code><a href="#quarkus-oidc_quarkus.oidc.authentication.response-mode">quarkus.oidc.authentication.response-mode</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Authorization code flow response mode</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>query</code>, <code>form-post</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>query</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-oidc_quarkus.oidc.authentication.redirect-path"></a><code><a href="#quarkus-oidc_quarkus.oidc.authentication.redirect-path">quarkus.oidc.authentication.redirect-path</a></code></p>
 </div>
 <div class="openblock description">
@@ -28826,6 +28994,20 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-oidc_quarkus.oidc.-tenant-.authentication.response-mode"></a><code><a href="#quarkus-oidc_quarkus.oidc.-tenant-.authentication.response-mode">quarkus.oidc."tenant".authentication.response-mode</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Authorization code flow response mode</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>query</code>, <code>form-post</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>query</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -31228,7 +31410,8 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 <div class="paragraph">
 <p>The set of supported locales that can be consumed by the extensions.
  The locales must be specified in the IETF BCP 47 format e.g. en-US or fr-FR.
- For instance, the Hibernate Validator extension makes use of it.</p>
+ For instance, the Hibernate Validator extension makes use of it.
+ Native-image build uses it to define additional locales that are supposed to be available at runtime.</p>
 </div>
 </div>
 </div></div></td>
@@ -31243,8 +31426,9 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 <div class="content">
 <div class="paragraph">
 <p>Default locale that can be consumed by the extensions.
- The locales must be specified in the IETF BCP 47 format e.g. en-US or fr-FR.
- For instance, the Hibernate Validator extension makes use of it.</p>
+ The locale must be specified in the IETF BCP 47 format e.g. en-US or fr-FR.
+ For instance, the Hibernate Validator extension makes use of it.
+ Native-image build uses this property to derive user.language and user.country for the application&#8217;s runtime.</p>
 </div>
 </div>
 </div></div></td>
@@ -31899,36 +32083,6 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-core_quarkus.native.user-language"></a><code><a href="#quarkus-core_quarkus.native.user-language">quarkus.native.user-language</a></code></p>
-</div>
-<div class="openblock description">
-<div class="content">
-<div class="paragraph">
-<p>Defines the user language used for building the native executable.
- Defaults to the system one.</p>
-</div>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>${user.language:}</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-core_quarkus.native.user-country"></a><code><a href="#quarkus-core_quarkus.native.user-country">quarkus.native.user-country</a></code></p>
-</div>
-<div class="openblock description">
-<div class="content">
-<div class="paragraph">
-<p>Defines the user country used for building the native executable.
- Defaults to the system one.</p>
-</div>
-</div>
-</div></div></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>${user.country:}</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -32949,6 +33103,20 @@ see <a href="https://micrometer.io/docs/registry/prometheus" class="bare">https:
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-core_quarkus.test.container.additional-exposed-ports-additional-exposed-ports"></a><code><a href="#quarkus-core_quarkus.test.container.additional-exposed-ports-additional-exposed-ports">quarkus.test.container.additional-exposed-ports</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Set additional ports to be exposed when @QuarkusIntegration needs to launch the application in a container.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
 <tr>
@@ -38160,6 +38328,21 @@ TCP</code> or <code>org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-scheduler_quarkus.scheduler.overdue-grace-period"></a><code><a href="#quarkus-scheduler_quarkus.scheduler.overdue-grace-period">quarkus.scheduler.overdue-grace-period</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Scheduled task will be flagged as overdue if next execution time is exceeded by this period.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
+  <a href="#duration-note-anchor" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>1S</code></p></td>
+</tr>
+<tr>
 <th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-security_quarkus-security-security"></a><a href="#quarkus-security_quarkus-security-security">Security</a></p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
 <th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
@@ -38493,6 +38676,20 @@ TCP</code> or <code>org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-graphql_quarkus.smallrye-graphql.websocket-subprotocols"></a><code><a href="#quarkus-smallrye-graphql_quarkus.smallrye-graphql.websocket-subprotocols">quarkus.smallrye-graphql.websocket-subprotocols</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Subprotocols that should be supported by the server for graphql-over-websocket use cases. Allowed subprotocols are "graphql-ws" and "graphql-transport-ws". By default, both are enabled.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><a id="quarkus-smallrye-graphql_quarkus.smallrye-graphql.ui.enable"></a><code><a href="#quarkus-smallrye-graphql_quarkus.smallrye-graphql.ui.enable">quarkus.smallrye-graphql.ui.enable</a></code></p>
 </div>
 <div class="openblock description">
@@ -38578,11 +38775,165 @@ TCP</code> or <code>org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP
 <div class="openblock description">
 <div class="content">
 <div class="paragraph">
-<p>WebSocket subprotocols that should be supported by this client for running subscriptions over websockets. Allowed values are: - <code>graphql-ws</code> for the deprecated Apollo protocol - <code>graphql-transport-ws</code> for the newer GraphQL over WebSocket protocol If multiple protocols are provided, the actual protocol to be used will be subject to negotiation with the server. To make the client work with the dummy protocol implemented by SmallRye GraphQL 1.4 server-side, leave this empty.</p>
+<p>WebSocket subprotocols that should be supported by this client for running GraphQL operations over websockets. Allowed values are: - <code>graphql-ws</code> for the deprecated Apollo protocol - <code>graphql-transport-ws</code> for the newer GraphQL over WebSocket protocol (default value) If multiple protocols are provided, the actual protocol to be used will be subject to negotiation with the server.</p>
 </div>
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>graphql-transport-ws</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.trust-store"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.trust-store">quarkus.smallrye-graphql-client."clients".trust-store</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The trust store location. Can point to either a classpath resource or a file.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.trust-store-password"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.trust-store-password">quarkus.smallrye-graphql-client."clients".trust-store-password</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The trust store password.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.trust-store-type"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.trust-store-type">quarkus.smallrye-graphql-client."clients".trust-store-type</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The type of the trust store. Defaults to "JKS".</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.key-store"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.key-store">quarkus.smallrye-graphql-client."clients".key-store</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The key store location. Can point to either a classpath resource or a file.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.key-store-password"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.key-store-password">quarkus.smallrye-graphql-client."clients".key-store-password</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The key store password.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.key-store-type"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.key-store-type">quarkus.smallrye-graphql-client."clients".key-store-type</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The type of the key store. Defaults to "JKS".</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-host"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-host">quarkus.smallrye-graphql-client."clients".proxy-host</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Hostname of the proxy to use.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-port"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-port">quarkus.smallrye-graphql-client."clients".proxy-port</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Port number of the proxy to use.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-username"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-username">quarkus.smallrye-graphql-client."clients".proxy-username</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Username for the proxy to use.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-password"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.proxy-password">quarkus.smallrye-graphql-client."clients".proxy-password</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Password for the proxy to use.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.max-redirects"></a><code><a href="#quarkus-smallrye-graphql-client_quarkus.smallrye-graphql-client.-clients-.max-redirects">quarkus.smallrye-graphql-client."clients".max-redirects</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Maximum number of redirects to follow.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
 <td class="tableblock halign-left valign-middle"></td>
 </tr>
 <tr>
@@ -40722,6 +41073,20 @@ TCP</code> or <code>org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP
 <div class="content">
 <div class="paragraph">
 <p>Start gRPC server in dev mode even if no gRPC services are implemented. By default set to <code>true</code> to ease incremental development of new services using dev mode.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-grpc_quarkus.grpc-client.stork-proactive-connections"></a><code><a href="#quarkus-grpc_quarkus.grpc-client.stork-proactive-connections">quarkus.grpc-client.stork-proactive-connections</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>If set to true, and a Stork load balancer is used, connections with all available service instances will be requested proactively. This means better load balancing at the cost of having multiple active connections.</p>
 </div>
 </div>
 </div></div></td>

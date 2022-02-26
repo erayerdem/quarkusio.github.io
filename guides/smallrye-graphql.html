@@ -295,7 +295,7 @@ However, you can go right to the completed example.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.7.1.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.7.2.Final:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=microprofile-graphql-quickstart \
     -DclassName="org.acme.microprofile.graphql.FilmResource" \
@@ -1627,6 +1627,20 @@ API <code>evolution</code>.</p>
 <div class="content">
 <div class="paragraph">
 <p>Exceptions that should be unwrapped (class names).</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">list of string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-smallrye-graphql_quarkus.smallrye-graphql.websocket-subprotocols"></a><code><a href="#quarkus-smallrye-graphql_quarkus.smallrye-graphql.websocket-subprotocols">quarkus.smallrye-graphql.websocket-subprotocols</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Subprotocols that should be supported by the server for graphql-over-websocket use cases. Allowed subprotocols are "graphql-ws" and "graphql-transport-ws". By default, both are enabled.</p>
 </div>
 </div>
 </div></div></td>

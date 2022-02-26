@@ -293,7 +293,7 @@ cd mongodb-quickstart</code></pre>
 <div class="title">Maven</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.7.1.Final:create \
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn io.quarkus.platform:quarkus-maven-plugin:2.7.2.Final:create \
     -DprojectGroupId=org.acme \
     -DprojectArtifactId=mongodb-quickstart \
     -Dextensions="resteasy-reactive-jackson,mongodb-client" \
@@ -1782,6 +1782,20 @@ quarkus.mongodb.native.dns.lookup-timeout=10s # the default is 5s</code></pre>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
   <a href="#duration-note-anchor" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><code>5S</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-mongodb_quarkus.mongodb.native.dns.log-activity"></a><code><a href="#quarkus-mongodb_quarkus.mongodb.native.dns.log-activity">quarkus.mongodb.native.dns.log-activity</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>If <code>native.dns.use-vertx-dns-resolver</code> is set to <code>true</code>, this property enables the logging ot the DNS lookup. It can be useful to understand why the lookup fails.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">

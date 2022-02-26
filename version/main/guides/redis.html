@@ -183,12 +183,10 @@
 <li><a href="#packaging-and-running-in-jvm-mode">Packaging and running in JVM mode</a></li>
 <li><a href="#running-native">Running Native</a></li>
 <li><a href="#connection-health-check">Connection Health Check</a></li>
-<li><a href="#multiple-clients-configuration">Multiple Redis Clients</a>
-<ul class="sectlevel2">
-<li><a href="#named-redis-client-injection">Named Redis client Injection</a></li>
+<li><a href="#multiple-clients-configuration">Multiple Redis Clients</a></li>
+<li><a href="#named-redis-client-injection">Named Redis Client Injection</a></li>
+<li><a href="#providing-redis-hosts-programmatically">Providing Redis Hosts Programmatically</a></li>
 <li><a href="#creating-clients-programmatically">Creating Clients Programmatically</a></li>
-</ul>
-</li>
 <li><a href="#config-reference">Configuration Reference</a></li>
 </ul></div>
     <div>
@@ -1040,8 +1038,11 @@ quarkus.redis.second.hosts=redis://localhost:6379</code></pre>
 The syntax is as follows: <code>quarkus.redis.[optional name.][redis configuration property]</code>.
 If the name is omitted, it configures the default client.</p>
 </div>
-<div class="sect2">
-<h3 id="named-redis-client-injection"><a class="anchor" href="#named-redis-client-injection"></a>Named Redis client Injection</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="named-redis-client-injection"><a class="anchor" href="#named-redis-client-injection"></a>Named Redis Client Injection</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>When using multiple clients, you can select the client to inject using the <code>io.quarkus.redis.client.RedisClientName</code> qualifier.
 Using the above properties to configure three different clients, you can also inject each one as follows:</p>
@@ -1061,8 +1062,54 @@ ReactiveRedisClient reactiveClient2;</code></pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="creating-clients-programmatically"><a class="anchor" href="#creating-clients-programmatically"></a>Creating Clients Programmatically</h3>
+</div>
+<div class="sect1">
+<h2 id="providing-redis-hosts-programmatically"><a class="anchor" href="#providing-redis-hosts-programmatically"></a>Providing Redis Hosts Programmatically</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>RedisHostsProvider</code> programmatically provides redis hosts. This allows for configuration of properties like redis connection password coming from other sources.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This is useful as it removes the need to store sensitive data in application.properties.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ApplicationScoped
+@Named("hosts-provider") // the name of the host provider
+public class ExampleRedisHostProvider implements RedisHostsProvider {
+    @Override
+    public Set&lt;URI&gt; getHosts() {
+        // do stuff to get the host
+        String host = "redis://localhost:6379/3"
+        return Collections.singleton(URI.create(host));
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The host provider can be used to configure the redis client like shown below</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.redis.hosts-provider-name=hosts-provider</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creating-clients-programmatically"><a class="anchor" href="#creating-clients-programmatically"></a>Creating Clients Programmatically</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>RedisClient</code> and <code>ReactiveRedisClient</code> provide factory methods to create clients programmatically.
 The client to be created are configured using the usual <a href="#config-reference">Redis configuration</a>.</p>
@@ -1104,7 +1151,6 @@ ReactiveRedisClient namedReactiveRedisClient = ReactiveRedisClient.createClient(
 </div>
 <div class="paragraph">
 <p>Please see also <a href="redis-reference#custom_redis_commands">How to use custom Redis Commands</a>.</p>
-</div>
 </div>
 </div>
 </div>

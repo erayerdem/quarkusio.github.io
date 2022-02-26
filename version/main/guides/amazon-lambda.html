@@ -793,7 +793,7 @@ public class LambdaHandlerTest {
 </div>
 </div>
 <div class="paragraph">
-<p>The mock event server is also started for <code>@NativeImageTest</code> unit tests so will work
+<p>The mock event server is also started for <code>@NativeImageTest</code> and <code>@QuarkusIntegrationTest</code> tests so will work
 with native binaries too.  All this provides similar functionality to the SAM CLI local testing, without the overhead of Docker.</p>
 </div>
 <div class="paragraph">
@@ -805,6 +805,9 @@ and test mode ports with application.properties</p>
 <pre class="highlightjs highlight"><code class="language-none hljs">quarkus.lambda.mock-event-server.dev-port=8082
 quarkus.lambda.mock-event-server.test-port=8083</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>A port value of zero will result in a randomly assigned port.</p>
 </div>
 </div>
 </div>

@@ -1043,7 +1043,7 @@ using the same field multiple times in a query is not allowed using PanacheQL as
 The MongoDB POJO codec doesn&#8217;t support <code>ZonedDateTime</code> and <code>OffsetDateTime</code> so you should convert them prior usage.</p>
 </div>
 <div class="paragraph">
-<p>MongoDB with Panache also supports extended MongoDB queries by providing a <code>Document</code> query, this is supported by the find/list/stream/count/delete methods.</p>
+<p>MongoDB with Panache also supports extended MongoDB queries by providing a <code>Document</code> query, this is supported by the find/list/stream/count/delete/update methods.</p>
 </div>
 <div class="paragraph">
 <p>MongoDB with Panache offers operations to update multiple documents based on an update document and a query :
@@ -1068,6 +1068,9 @@ The MongoDB POJO codec doesn&#8217;t support <code>ZonedDateTime</code> and <cod
 </li>
 <li>
 <p><code>{'firstname' : firstname, 'status' : :status}</code> ` will be mapped to the update document <code>{'$set' : {'firstname': :firstname, 'status': :status}}</code></p>
+</li>
+<li>
+<p><code>{'$inc': {'cpt': ?1}}</code> will be use as-is</p>
 </li>
 </ul>
 </div>
@@ -1236,7 +1239,7 @@ You can have your projection class extends from another class. In this case, the
 <h2 id="the-pojocodecprovider-easy-object-to-bson-document-conversion"><a class="anchor" href="#the-pojocodecprovider-easy-object-to-bson-document-conversion"></a>The PojoCodecProvider: easy object to BSON document conversion.</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>MongoDB with Panache uses the <a href="https://mongodb.github.io/mongo-java-driver/4.2/bson/pojos">PojoCodecProvider</a>, with link:https://mongodb.github.io/mongo-java-driver/4.2/pojos/#pojo-support[automatic POJO support,
+<p>MongoDB with Panache uses the <a href="https://mongodb.github.io/mongo-java-driver/4.2/bson/pojos">PojoCodecProvider</a>, with <a href="https://mongodb.github.io/mongo-java-driver/4.2/pojos/#pojo-support">automatic POJO support</a>,
 to automatically convert your object to a BSON document.</p>
 </div>
 <div class="paragraph">
